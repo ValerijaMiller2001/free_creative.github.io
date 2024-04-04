@@ -1,0 +1,98 @@
+.main {
+    background: url('../img/bg/milk.jpeg') center center / cover no-repeat;
+    height: 100vh;
+    &_header {
+        height: 100px;
+        padding: 32px 0 10px 0;
+        display: flex;
+        justify-content: space-between;
+        &_logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-img {
+                display: block;
+                margin-right: 25px;
+                height: 36px;
+            }
+            &-title {
+                color: $color-white;;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 19px;
+                width: 200px;
+            }
+        }
+        &_social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &-tel {
+                color: $color-white;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 140%;
+                text-align: center;
+                text-decoration: none;
+                border: 1px solid $color-white;
+                border-radius: 15px;
+                width: 204px;
+                height: 36px;
+                padding: 7px 27px;
+                margin-right: 25px;
+                cursor: pointer;
+            }
+            &-icon {
+                position: relative;
+                width: 36px;
+                height: 36px;
+                border: 1px solid $color-white;
+                border-radius: 100%;
+                margin-right: 25px;
+                cursor: pointer;
+                img {
+                    height: 20px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+    &_content {
+        width: 560px;
+        margin-top: 190px;
+        &-title {
+            color: $color-black;
+            font-size: 55px;
+            font-weight: 400;
+            line-height: 100%;
+        }
+        &-subtitle {
+            color: $color-black;
+            font-size: 34px;
+            font-weight: 400;
+            line-height: 110%;
+            margin-top: 40px;
+        }
+        &_btns {
+            display: flex;
+            justify-content: start;
+            margin-top: 40px;
+            &-btn {
+                height: 70px;
+                padding: 23px 47px;
+                margin-right: 20px;
+                background-color: $color-white;
+                border-radius: 40px;
+                color: $color-black;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 140%;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
