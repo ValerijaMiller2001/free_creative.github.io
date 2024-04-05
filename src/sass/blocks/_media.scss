@@ -2,17 +2,236 @@
     .container {
         max-width: 960px;
     }
+
+    .main {
+        &_content {
+            width: 495px;
+            &-title {
+                font-size: 45px;
+            }
+            &-subtitle {
+                font-size: 26px;
+            }
+            &_btns {
+                &-btn {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .about {
+        padding: 60px 0;
+        &_block {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+
+    .elements {
+        padding: 60px 0;
+    }
 }
 
 @media (max-width: 992px) {
     .container {
         max-width: 720px;
     }
+
+    .main {
+        background: url('../img/bg/milk_blue.jpeg') center center / cover no-repeat;
+        position: relative;
+        &_header {
+            &_social {
+                display: none;
+            }
+        }
+        &_content {
+            margin-top: 150px;
+            &-title {
+                color: $color-white;
+            }
+            &-subtitle {
+                color: $color-white;
+            }
+            &_btns {
+                flex-direction: column;
+                margin-top: 0;
+                &-btn {
+                    width: 212px;
+                    margin-right: 0;
+                    margin-top: 40px;
+                    padding: 23px 0;
+                }
+            }
+        }
+        &_hamburger {
+            display: block;
+            position: absolute;
+            top: 32px;
+            right: 10px;
+            cursor: pointer;
+            span {
+                display: block;
+                width: 30px;
+                height: 2px;
+                background-color: $color-white;
+                margin-bottom: 6px;
+            }
+        }
+        &_menu {
+            display: block;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            z-index: 10;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.6s;
+            &.active {
+                left: 0;
+                visibility: visible;
+                opacity: 1;
+            }
+            &-block {
+                position: relative;
+                width: 100%;
+                background-color: $color-white;
+                height: 100%;
+                padding-top: 32px;
+                padding-left: 40px;
+                transition: all 0.6s;
+                z-index: 10;
+            }
+            &-close {
+                display: block;
+                position: absolute;
+                top: 32px;
+                right: 40px;
+                z-index: 15;
+                cursor: pointer;
+            }
+
+            &-list {
+                list-style-type: none;
+                margin-top: 80px;
+                padding: 0;
+            }
+            &-link {
+                color: $color-black;
+                font-size: 45px;
+                font-weight: 400;
+                line-height: 100%;
+                padding: 10px 0;
+                margin-bottom: 15px;
+            }
+            &-social {
+                display: block;
+                position: absolute;
+                bottom: 80px;
+                left: 40px;
+                &-icons {
+                    display: flex;
+                    justify-content: start;
+                    &-icon {
+                        position: relative;
+                        width: 36px;
+                        height: 36px;
+                        border: 1px solid $color-black;
+                        border-radius: 100%;
+                        margin-right: 25px;
+                        cursor: pointer;
+                        img {
+                            height: 20px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+                &-text {
+                    display: block;
+                    color: $color-black;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 110%;
+                    margin-top: 20px;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
 }
 
 @media (max-width: 768px) {
     .container {
         max-width: 540px;
+    }
+
+    .main {
+        &_content {
+            margin-top: 30px;
+            width: 415px;
+            &-title {
+                font-size: 30px;
+            }
+            &-subtitle {
+                font-size: 20px;
+                margin-top: 25px;
+            }
+            &_btns {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                margin-top: 25px;
+                &-btn {
+                    margin-right: 25px;
+                    width: auto;
+                    padding: 23px 47px;
+                    font-size: 15px;
+                    &:last-child {
+                        margin-right: 0;
+                        padding: 23px 28px;
+                    }
+                }
+            }
+        }
+        &_menu {
+            &-link {
+                font-size: 35px;
+                padding: 5px 0;
+                margin-bottom: 10px;
+            }
+            &-social {
+                bottom: 25px;
+                &-text {
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    .about {
+        &_block {
+            display: block;
+        }
+    }
+
+    .elements {
+        &_block {
+            grid-template: repeat(5, minmax(80px, 100px)) / 100%;
+            &_item {
+                grid-template: minmax(80px, 100px) / 1fr 3fr;
+                column-gap: 15px;
+                justify-content: center;
+                align-items: center;
+            }
+        }
     }
 }
 
@@ -20,5 +239,29 @@
     .container {
         width: 100%;
         padding: 0 10px;
+    }
+
+    .main {
+        &_header {
+            &_logo {
+                width: 210px;
+                &-title {
+                    font-size: 12px;
+                }
+            }
+        }
+        &_content {
+            width: 80%;
+            &_btns {
+                display: block;
+                margin-top: 20px;
+                &-btn {
+                    display: block;
+                    width: 206px;
+                    margin-top: 20px;
+                    margin-right: 0;
+                }
+            }
+        }
     }
 }
