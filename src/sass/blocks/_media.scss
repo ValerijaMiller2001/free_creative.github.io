@@ -30,6 +30,26 @@
     .elements {
         padding: 60px 0;
     }
+
+    .price {
+        padding: 60px 0;
+        &_block {
+            grid-template-columns: 530px 400px;
+            gap: 30px;
+        }
+        &_link {
+            width: 400px;
+            font-size: 16px;
+            &::before {
+                bottom: 19px;
+                right: 240px;
+            }
+        }
+    }
+
+    .portfolio {
+        padding: 60px 0;
+    }
 }
 
 @media (max-width: 992px) {
@@ -165,6 +185,36 @@
         }
     }
 
+    .about {
+        padding: 60px 0 40px;
+        &_block {
+            display: block;
+        }
+    }
+
+    .elements {
+        padding: 40px 0;
+    }
+
+    .price {
+        padding: 40px 0;
+        &_block {
+            display: block;
+        }
+        &_link {
+            width: 720px;
+            font-size: 18px;
+            height: 70px;
+            &::before {
+                bottom: 13px;
+                right: 447px;
+            }
+        }
+    }
+
+    .portfolio {
+        padding: 40px 0;
+    }
 
 }
 
@@ -224,12 +274,27 @@
 
     .elements {
         &_block {
-            grid-template: repeat(5, minmax(80px, 100px)) / 100%;
+            grid-template: repeat(5, minmax(55px, 65px)) / 100%;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 30px;
             &_item {
-                grid-template: minmax(80px, 100px) / 1fr 3fr;
+                grid-template: minmax(55px, 65px) / 55px 385px;
                 column-gap: 15px;
                 justify-content: center;
                 align-items: center;
+                &-text {
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    .price {
+        &_link {
+            width: 540px;
+            &::before {
+                right: 70px;
             }
         }
     }
@@ -262,6 +327,57 @@
                     margin-right: 0;
                 }
             }
+        }
+    } 
+
+    .about {
+        padding: 40px 0 20px;
+    }
+
+    .elements {
+        padding: 20px 0;
+        &_block {
+            gap: 10px;
+            &_item {
+                grid-template: minmax(55px, 65px) / 50px 240px;
+                column-gap: 10px;
+                &-text {
+                    font-size: 16px;
+                }
+                &-number {
+                    font-size: 45px;
+                }
+            }
+        }
+    }
+
+    .price {
+        padding: 20px 0;
+        &_block {
+            margin-top: 15px;
+        }
+        &_link {
+            width: 100%;
+            min-height: 85px;
+            font-size: 16px;
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .portfolio {
+        padding: 20px 0;
+        &_item {
+            &-block {
+                display: block;
+            }
+            &-text {
+                margin-right: 0;
+            }
+        }
+        &_btn {
+            margin-top: 30px;
         }
     }
 }
