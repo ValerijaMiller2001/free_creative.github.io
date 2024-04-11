@@ -125,12 +125,12 @@
     padding: 70px 0;
     &_block {
         display: grid;
-        grid-template: minmax(200px, 250px) / repeat(5, 1fr);
+        grid-template: minmax(125px, 200px) / repeat(5, 1fr);
         gap: 20px;
         margin-top: 50px;
         &_item {
             display: grid;
-            grid-template: 55px minmax(25px, 245px) / auto;
+            grid-template: 55px minmax(25px, 125px) / auto;
             row-gap: 20px;
             &-number {
                 color: $color-black;
@@ -195,6 +195,10 @@
     padding: 70px 0;
     &_item {
         margin: 50px 0;
+        display: none;
+        &-active {
+            display: block;
+        }
         &-img {
             width: 100%;
             height: 100%;
@@ -234,6 +238,7 @@
             width: 214px;
             height: 68px;
             border-radius: 40px;
+            border: none;
             background: $color-blue;
             color: $color-white;
             font-size: 20px;
@@ -243,6 +248,71 @@
             text-decoration: none;
             padding: 23px 0;
             cursor: pointer;
+            &-close {
+                display: block;
+                margin: 0 auto;
+                width: 214px;
+                height: 68px;
+                border-radius: 40px;
+                border: none;
+                background: $color-blue;
+                color: $color-white;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 110%;
+                text-align: center;
+                text-decoration: none;
+                padding: 23px 0;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.guideline {
+    padding: 70px 0;
+    &_block {
+        display: grid;
+        grid-template-columns: 635px 445px;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+    }
+    &_img {
+        display: block;
+        background: url(../img/guideline.jpeg) center center / cover no-repeat;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &_text {
+        &_blue {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: $color-blue;
+            margin-bottom: 30px;
+            &-title {
+                color: $color-white;
+                font-size: 26px;
+                font-weight: 400;
+                line-height: 110%;
+            }
+            &-subtitle {
+                color: $color-white;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 110%;
+                margin-top: 20px;
+            }
         }
     }
 }

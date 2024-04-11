@@ -50,6 +50,23 @@
     .portfolio {
         padding: 60px 0;
     }
+
+    .guideline {
+        padding: 60px 0;
+        &_block {
+            grid-template-columns: 530px 400px;
+        }
+        &_text {
+            &_blue {
+                &-title {
+                    font-size: 20px;
+                }
+                &-subtitle {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -194,6 +211,14 @@
 
     .elements {
         padding: 40px 0;
+        &_block {
+            grid-template: minmax(125px, 250px) / repeat(5, 1fr);
+            gap: 10px;
+            &_item {
+                grid-template: 55px minmax(25px, 185px) / auto;
+                row-gap: 10px;
+            }
+        }
     }
 
     .price {
@@ -214,6 +239,25 @@
 
     .portfolio {
         padding: 40px 0;
+    }
+
+    .guideline {
+        padding: 40px 0;
+        &_block {
+            display: block;
+        }
+        &_img {
+            height: 400px;
+        }
+        &_text {
+            &_blue {
+                margin-top: 15px;
+                margin-bottom: 15px;
+                &-subtitle {
+                    font-size: 18px;
+                }
+            }
+        }
     }
 
 }
@@ -274,12 +318,12 @@
 
     .elements {
         &_block {
-            grid-template: repeat(5, minmax(55px, 65px)) / 100%;
+            grid-template: repeat(5, minmax(50px, 60px)) / 100%;
             justify-content: center;
-            gap: 15px;
+            gap: 5px;
             margin-top: 30px;
             &_item {
-                grid-template: minmax(55px, 65px) / 55px 385px;
+                grid-template: minmax(50px, 60px) / 55px 385px;
                 column-gap: 15px;
                 justify-content: center;
                 align-items: center;
@@ -295,6 +339,19 @@
             width: 540px;
             &::before {
                 right: 70px;
+            }
+        }
+    }
+
+    .guideline {
+        &_img {
+            height: 350px;
+        }
+        &_text {
+            &_blue {
+                &-subtitle {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -337,7 +394,6 @@
     .elements {
         padding: 20px 0;
         &_block {
-            gap: 10px;
             &_item {
                 grid-template: minmax(55px, 65px) / 50px 240px;
                 column-gap: 10px;
@@ -378,6 +434,12 @@
         }
         &_btn {
             margin-top: 30px;
+        }
+    }
+
+    .guideline {
+        &_img {
+            height: 230px;
         }
     }
 }
