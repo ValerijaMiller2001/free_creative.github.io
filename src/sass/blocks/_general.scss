@@ -464,3 +464,108 @@
         }
     }
 }
+
+.guarantees {
+    padding: 70px 0;
+    background: url(../img/guarantees.jpeg) center center / cover no-repeat;
+    &_title {
+        color: $color-white;
+    }
+    &_wrapper {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        &_item {
+            width: 200px;
+            &-num {
+                display: block;
+                color: $color-white;
+                font-size: 55px;
+                font-weight: 400;
+                line-height: 100%;
+                text-align: center;
+            }
+            &-descr {
+                color: $color-white;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 19px;
+            }
+        }
+    }
+}
+
+.contacts {
+    padding: 70px 0;
+    &_wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 500px);
+        gap: 100px;
+        justify-content: center;
+    }
+    &_form {
+        margin-top: 30px;
+        &_input {
+            box-sizing: border-box;
+            border: 1px solid $color-black;
+            border-radius: 10px;
+            width: 445px;
+            height: 71px;
+            color: $color-dark_grey;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 140%;
+            padding: 23px 0 23px 23px;
+            margin-bottom: 10px;
+        }
+        &_trigger {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        &_checkbox {
+            margin-right: 10px;
+            box-sizing: border-box;
+            border: 1px solid $color-black;
+            border-radius: 5px;
+            width: 18px;
+            height: 18px;
+            accent-color: $color-blue;
+        }
+        &_police {
+            margin-top: 0;
+            a {
+                text-decoration: none;
+                color: $color-blue;
+                cursor: pointer;
+            }
+        }
+        &_btn {
+            border-radius: 40px;
+            background: $color-blue;
+            width: 228px;
+            height: 71px;
+            border: none;
+            color: $color-white;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 140%;
+            text-align: center;
+            text-decoration: none;
+            padding: 23px 0;
+            cursor: pointer;
+            margin-top: 45px;
+        }
+    }
+    &_block {
+        &-descr {
+            display: block;
+            color: $color-black;
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 110%;
+            margin: 30px 0 0;
+            text-decoration: none;
+        }
+    }
+}

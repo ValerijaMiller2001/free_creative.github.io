@@ -102,6 +102,31 @@
             }
         }
     }
+
+    .guarantees {
+        padding: 60px 0;
+        &_wrapper {
+            &_item {
+                width: 180px;
+                &-descr {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .contacts {
+        padding: 60px 0;
+        &_wrapper {
+            grid-template-columns: repeat(2, 400px);
+            gap: 80px;
+        }
+        &_form {
+            &_input {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width: 992px) {
@@ -314,6 +339,7 @@
     }
 
     .stages {
+        padding: 40px 0;
         &_wrapper {
             grid-template-rows: repeat(3, 315px);
             gap: 15px;
@@ -345,6 +371,31 @@
 
     .advantages {
         display: none;
+    }
+
+    .guarantees {
+        padding: 40px 0;
+        &_wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            &_item {
+                width: 200px;
+            }
+        }
+    }
+
+    .contacts {
+        padding: 40px 0;
+        &_wrapper {
+            grid-template-columns: repeat(2, 300px);
+            gap: 60px;
+        }
+        &_form {
+            &_btn {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -444,6 +495,55 @@
             grid-template: 100px 215px / repeat(3, 150px);
             &_item {
                 grid-template: 50px 150px / 150px;
+            }
+        }
+    }
+
+    .guarantees {
+        &_wrapper {
+            display: block;
+            &_item {
+                display: flex;
+                justify-content: start;
+                width: 100%;
+                margin-top: 20px;
+                &-num {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+
+    .contacts {
+        &_wrapper {
+            display: block;
+        }
+        &_block {
+            &:nth-child(2) {
+                margin-top: 60px;
+            }
+            &-descr {
+                width: 450px;
+                display: block;
+                margin: 0 auto;
+                margin-top: 30px;
+            }
+        }
+        &_form {
+            &_input {
+                width: 450px;
+                display: block;
+                margin: 0 auto;
+                margin-bottom: 15px;
+            }
+            &_btn {
+                width: 450px;
+                display: block;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+            &_trigger {
+                justify-content: center;
             }
         }
     }
@@ -573,6 +673,26 @@
                 display: block;
                 grid-row: unset;
                 margin-top: 20px;
+            }
+        }
+    }
+
+    .contacts {
+        &_form {
+            &_input {
+                width: 100%;
+                height: 60px;
+            }
+            &_btn {
+                width: 100%;
+                height: 60px;
+                padding: 18px 0;
+            }
+        }
+        &_block {
+            &-descr {
+                width: 100%;
+                font-size: 20px;
             }
         }
     }
